@@ -49,10 +49,10 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="challenges.html">Challenges</a></li>
+        <li><a href="challenges.html">Elab Challenges</a></li>
+        <li><a href="prototype.html">Prototype</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -63,31 +63,41 @@
     <section class="gallery">
       <div class="container">
         <h2>Gallery</h2>
-        <p>Explore a selection of creative works, projects, and moments from the nilumi community. Our gallery showcases the talent and diversity of our students, alumni, and team.</p>
+        <p>Explore the  moments from the nilumi community. Our gallery showcases the talent and diversity of our students, alumni, and team.</p>
         <div class="gallery-grid">
+      
           <div class="gallery-item">
-            <img src="https://via.placeholder.com/400x180?text=Art+Exhibit+1" alt="Art Exhibit 1">
-            <div class="gallery-caption">"Dreamscape" - Student Art Exhibition 2023</div>
+            <img src="IMG_1242.jpg" alt="Student Artwork 1" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1242.jpg')">
           </div>
           <div class="gallery-item">
-            <img src="https://via.placeholder.com/400x180?text=Workshop+2" alt="Workshop 2">
-            <div class="gallery-caption">Design Thinking Workshop - Spring 2024</div>
+            <img src="IMG_1239.jpg" alt="Student Artwork 2" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1239.jpg')">
           </div>
           <div class="gallery-item">
-            <img src="https://via.placeholder.com/400x180?text=Digital+Art+3" alt="Digital Art 3">
-            <div class="gallery-caption">Digital Art Showcase - "Urban Visions"</div>
+            <img src="IMG_1238.jpg" alt="Student Artwork 3" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1238.jpg')">
           </div>
           <div class="gallery-item">
-            <img src="https://via.placeholder.com/400x180?text=Culture+Event+4" alt="Culture Event 4">
-            <div class="gallery-caption">Culture & Creative Industries Event</div>
+            <img src="IMG_1235.jpg" alt="Student Artwork 4" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1235.jpg')">
           </div>
           <div class="gallery-item">
-            <img src="https://via.placeholder.com/400x180?text=Team+Collab+5" alt="Team Collaboration 5">
-            <div class="gallery-caption">Team Collaboration - Community Mural Project</div>
+            <img src="IMG_1237.jpg" alt="Student Artwork 5" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1237.jpg')">
           </div>
           <div class="gallery-item">
-            <img src="https://via.placeholder.com/400x180?text=Student+Portfolio+6" alt="Student Portfolio 6">
-            <div class="gallery-caption">Student Portfolio Highlight - "Colorful Futures"</div>
+            <img src="IMG_1234.jpg" alt="Student Artwork 6" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1234.jpg')">
+          </div>
+          <div class="gallery-item">
+            <img src="IMG_1264.jpg" alt="Event Photo 1" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1264.jpg')">
+          </div>
+          <div class="gallery-item">
+            <img src="IMG_1260.jpg" alt="Event Photo 2" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1260.jpg')">
+          </div>
+          <div class="gallery-item">
+            <img src="IMG_1261.jpg" alt="Event Photo 3" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1261.jpg')">
+          </div>
+          <div class="gallery-item">
+            <img src="IMG_1208.HEIC" alt="Gallery Image 1" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_1208.HEIC')">
+          </div>
+          <div class="gallery-item">
+            <img src="IMG_0095.HEIC" alt="Gallery Image 2" style="cursor:pointer;" onclick="openGalleryLightbox('IMG_0095.HEIC')">
           </div>
         </div>
       </div>
@@ -99,5 +109,23 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <!-- Lightbox Modal for Gallery -->
+  <div id="gallery-lightbox-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+    <span onclick="closeGalleryLightbox()" style="position:absolute;top:30px;right:40px;font-size:2.5rem;color:#fff;cursor:pointer;font-weight:bold;">&times;</span>
+    <img id="gallery-lightbox-img" src="" style="max-width:90vw;max-height:80vh;border-radius:16px;box-shadow:0 4px 32px #000;">
+  </div>
+  <script>
+  function openGalleryLightbox(src) {
+    document.getElementById('gallery-lightbox-img').src = src;
+    document.getElementById('gallery-lightbox-modal').style.display = 'flex';
+  }
+  function closeGalleryLightbox() {
+    document.getElementById('gallery-lightbox-modal').style.display = 'none';
+    document.getElementById('gallery-lightbox-img').src = '';
+  }
+  document.getElementById('gallery-lightbox-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeGalleryLightbox();
+  });
+  </script>
 </body>
 </html> 

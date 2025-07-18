@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nilumi | Team</title>
+  <title>NiLumi | Team</title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">nilumi</div>
+      <div class="logo">NiLumi</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="challenges.html">Challenges</a></li>
+        <li><a href="challenges.html">Elab Challenges</a></li>
+        <li><a href="prototype.html">Prototype</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -29,19 +29,25 @@
         <h2>Meet the nilumi Team</h2>
         <div class="team-list">
           <div class="team-member">
-            <img src="https://via.placeholder.com/120" alt="Dr. Aisha Bello" style="border-radius:50%;margin-bottom:1rem;">
-            <h4>Dr. Aisha Bello</h4>
-            <p><strong>Founder & Director</strong><br>Renowned artist and educator with 20+ years of experience in creative leadership. Aisha is passionate about empowering the next generation of artists and designers.</p>
+            <img src="./PHOTO-2025-07-17-12-16-12.jpg" style="border-radius:50%;margin-bottom:1rem;width:120px;height:120px;object-fit:cover;cursor:pointer;" onclick="openLightbox('./PHOTO-2025-07-17-12-16-12.jpg')">
+             <a href="https://www.linkedin.com/in/nonie-okana-81b4b0363" target="_blank"><h4> Nonie Okana</h4></a>
           </div>
           <div class="team-member">
-            <img src="https://via.placeholder.com/120" alt="Samuel Okoro" style="border-radius:50%;margin-bottom:1rem;">
-            <h4>Samuel Okoro</h4>
-            <p><strong>Lead Designer</strong><br>Expert in branding, UI/UX, and digital innovation. Samuel has led design teams for top agencies and is dedicated to mentoring new talent.</p>
+            <img src="./PHOTO-2025-07-17-12-21-28.jpg" alt="Iris Eyenga" style="border-radius:50%;margin-bottom:1rem;width:120px;height:120px;object-fit:cover;cursor:pointer;" onclick="openLightbox('./PHOTO-2025-07-17-12-21-28.jpg')">
+<a href="https://www.linkedin.com/in/iris-marie-juliette-enama-eyenga-b35764375/" target="_blank"><h4>Iris Eyenga</h4></a>
           </div>
           <div class="team-member">
-            <img src="https://via.placeholder.com/120" alt="Linda Mensah" style="border-radius:50%;margin-bottom:1rem;">
-            <h4>Linda Mensah</h4>
-            <p><strong>Program Manager</strong><br>Specialist in cultural management and creative entrepreneurship, Linda has launched numerous community arts projects and supports students throughout their journey.</p>
+            <img src="./lesly2.jpg" alt="Lesly Inkurunziza" style="border-radius:50%;margin-bottom:1rem;width:120px;height:120px;object-fit:cover;cursor:pointer;" onclick="openLightbox('./lesly2.jpg')">
+            <a href="http://linkedin.com/in/inkurunziza-lesly-3146b336a" target="_blank"><h4>Lesly Inkurunziza</h4></a>
+          </div>
+          <div class="team-member">
+            <img src="/PHOTO-2025-07-17-12-17-04.jpg" alt="Mariam Soumare" style="border-radius:50%;margin-bottom:1rem;width:120px;height:120px;object-fit:cover;cursor:pointer;" onclick="openLightbox('/PHOTO-2025-07-17-12-17-04.jpg')">
+            <a href="https://www.linkedin.com/in/mariam-samba-soumare-36b8972bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
+            " target="_blank"><h4>Mariam Soumare</h4></a>
+          </div>
+          <div class="team-member">
+            <img src="./PHOTO-2025-07-17-16-59-08.jpg" alt="Dorcas Umwali" style="border-radius:50%;margin-bottom:1rem;width:120px;height:120px;object-fit:cover;cursor:pointer;" onclick="openLightbox('./PHOTO-2025-07-17-16-59-08.jpg')">
+            <a href="https://www.linkedin.com/in/umwali-dorcus-591628298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><h4>Dorcas Umwali</h4></a>
           </div>
         </div>
         <div class="team-philosophy" style="margin-top:2.5rem;">
@@ -57,5 +63,23 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+    <span onclick="closeLightbox()" style="position:absolute;top:30px;right:40px;font-size:2.5rem;color:#fff;cursor:pointer;font-weight:bold;">&times;</span>
+    <img id="lightbox-img" src="" style="max-width:90vw;max-height:80vh;border-radius:16px;box-shadow:0 4px 32px #000;">
+  </div>
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-modal').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').style.display = 'none';
+      document.getElementById('lightbox-img').src = '';
+    }
+    document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+  </script>
 </body>
 </html> 

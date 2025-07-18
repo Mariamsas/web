@@ -3,20 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nilumi | Challenges</title>
+  <title>NiLumi | Elab Challenges</title>
   <link rel="stylesheet" href="main.css">
+  <style>
+    .elab-intro {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .elab-intro textarea {
+      width: 100%;
+      min-height: 80px;
+      border-radius: 10px;
+      border: 1.5px solid var(--accent2);
+      padding: 1rem;
+      font-size: 1.1rem;
+      background: var(--bg-main);
+      color: var(--text-main);
+      margin-top: 1rem;
+      resize: vertical;
+      font-family: inherit;
+    }
+    .challenge-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    .challenge-row {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background: var(--card-bg);
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(108,99,255,0.10);
+      padding: 1.5rem 1rem;
+      flex-wrap: wrap;
+    }
+    .challenge-row.reverse {
+      flex-direction: row-reverse;
+    }
+    .challenge-media {
+      flex: 1 1 320px;
+      min-width: 220px;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .challenge-media video, .challenge-media img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #222;
+      display: block;
+    }
+    .challenge-info {
+      flex: 2 1 320px;
+      min-width: 220px;
+      color: var(--text-secondary);
+      padding: 0 1rem;
+    }
+    .challenge-title {
+      color: var(--accent2);
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.7rem;
+    }
+    @media (max-width: 900px) {
+      .challenge-row, .challenge-row.reverse {
+        flex-direction: column !important;
+        gap: 1.2rem;
+      }
+      .challenge-media video, .challenge-media img {
+        height: 140px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">nilumi</div>
+      <div class="logo">NiLumi</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="challenges.html">Challenges</a></li>
+        <li><a href="challenges.html">Elab Challenges</a></li>
+        <li><a href="prototype.html">Prototype</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -26,39 +101,64 @@
   <main>
     <section class="challenges">
       <div class="container">
-        <h2>Challenges in the Creative Sector</h2>
-        <p>The creative sector is full of opportunity, but also faces unique challenges. At nilumi, we are committed to identifying these obstacles and providing real solutions for our community.</p>
-        <div style="margin-top:2rem;">
-          <h3>Lack of Access</h3>
-          <p>Many aspiring creatives lack access to quality training and resources.</p>
-          <p><strong>How nilumi helps:</strong> We offer accessible, affordable, and inclusive training programs for all backgrounds.</p>
+        <h2>Elab Challenges</h2>
+        <div class="elab-intro">
+          <h3>Our Elab Journey</h3>
+          <p>Discover the creative journey of NiLumi students and community members as they tackle real-world challenges through art, design, and innovation. Each challenge below showcases our passion, teamwork, and impact.</p>
         </div>
-        <div style="margin-top:2rem;">
-          <h3>Limited Industry Connections</h3>
-          <p>Breaking into the creative industry can be difficult without the right network.</p>
-          <p><strong>How nilumi helps:</strong> We provide strong mentorship, industry networking, and community events to connect you with professionals.</p>
-        </div>
-        <div style="margin-top:2rem;">
-          <h3>Uncertain Career Paths</h3>
-          <p>Many are unsure how to turn their passion into a sustainable career.</p>
-          <p><strong>How nilumi helps:</strong> We offer career guidance, portfolio reviews, and job placement support to help you succeed.</p>
-        </div>
-        <div style="margin-top:2rem;">
-          <h3>Underrepresentation</h3>
-          <p>Marginalized groups often face additional barriers to entry and recognition.</p>
-          <p><strong>How nilumi helps:</strong> We provide scholarships, outreach, and a welcoming environment for underrepresented groups.</p>
-        </div>
-        <div style="margin-top:2rem;">
-          <h3>Rapidly Changing Tools</h3>
-          <p>Keeping up with new technologies and trends is a constant challenge.</p>
-          <p><strong>How nilumi helps:</strong> Our curriculum is always evolving, with hands-on learning and the latest industry tools.</p>
+        <div class="challenge-list">
+          <div class="challenge-row">
+            <div class="challenge-media">
+              <iframe width="100%" height="200" style="border-radius:12px;background:#222;box-shadow:0 2px 12px rgba(108,99,255,0.10);" src="https://www.youtube.com/embed/dcoICgyL_Eg" title="Elab Challenge Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="challenge-info">
+              <div class="challenge-title">Challenge 1: Introduction</div>
+              <div>Our first challenge. Here you get to know about us. Where we come from, fun facts and interests. The excitement and spark was visible on our faces.</div>
+            </div>
+          </div>
+          <div class="challenge-row reverse">
+            <div class="challenge-media">
+              <iframe width="100%" height="200" style="border-radius:12px;background:#222;box-shadow:0 2px 12px rgba(108,99,255,0.10);" src="https://www.youtube.com/embed/oGzmwOAn2bU" title="Elab Challenge Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="challenge-info">
+              <div class="challenge-title">Challenge 2: Discover Africa</div>
+              <div>For this challenge we had to tell the story of a community. We chose Les Sapeurs. An amazing community in Congo. If you want to know more about them, watch our video.</div>
+            </div>
+          </div>
+          <div class="challenge-row">
+            <div class="challenge-media">
+              <iframe width="100%" height="200" style="border-radius:12px;background:#222;box-shadow:0 2px 12px rgba(108,99,255,0.10);" src="https://www.youtube.com/embed/pyKMcY9MjCc" title="Elab Challenge Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="challenge-info">
+              <div class="challenge-title">Challenge 3: HELP-LAB</div>
+              <div>For this challenge we had to help a community. As ALU students, our immediate community was the ALU Food Court. A place where we engage actively. We helped the restaurant owners during rush hour with their activities.</div>
+            </div>
+          </div>
+          <div class="challenge-row reverse">
+            <div class="challenge-media">
+              <iframe width="100%" height="200" style="border-radius:12px;background:#222;box-shadow:0 2px 12px rgba(108,99,255,0.10);" src="https://www.youtube.com/embed/ZZlTFFgqgq0" title="Elab Challenge Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="challenge-info">
+              <div class="challenge-title">Challenge 4: Treasure Hunt</div>
+              <div>For this challenge we had to interview the CEO of a project or organization that fell under our chosen GCGO—Job Creation Arts, culture and design.</div>
+            </div>
+          </div>
+          <div class="challenge-row">
+            <div class="challenge-media">
+              <iframe width="100%" height="200" style="border-radius:12px;background:#222;box-shadow:0 2px 12px rgba(108,99,255,0.10);" src="https://www.youtube.com/embed/28WrGZd8mik" title="Elab Challenge Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="challenge-info">
+              <div class="challenge-title">Challenge 5: Mission Launch</div>
+              <div>For this challenge we had to pitch a solution for the problem we identified. A new project, a new app, a new idea. We competed to acquire 10,000 US Dollars. We're still waiting for it.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
   <footer>
     <div class="footer-content">
-      <p>&copy; 2024 nilumi. All rights reserved.</p>
+      <p>&copy; 2024 NiLumi. All rights reserved.</p>
     </div>
   </footer>
   <script src="script.js"></script>
